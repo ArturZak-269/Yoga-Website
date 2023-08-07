@@ -4,7 +4,7 @@ Welcome to my first deployed website during my Frontend Developer Course.
 ## Menu
 * [Description](#description)
 * [Technologies Used](#technologies-used)
-* [DEMO](#demo+preview)
+* [DEMO](#demo-+-preview)
 * [Author](#author)
 
 ## Description 
