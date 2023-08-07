@@ -4,7 +4,7 @@ Welcome to my first deployed website during my Frontend Developer Course.
 ## Menu
 * [Description](#description)
 * [Technologies Used](#technologies-used)
-* [DEMO](#demo-+-preview)
+* [DEMO](#demo)
 * [Author](#author)
 
 ## Description 
@@ -15,7 +15,7 @@ I'm excited to share my passion for beloved series and hobbies with you. Navigat
 - CSS
 - JavaScript
 
-## DEMO + Preview
+## DEMO
 https://arturzak-269.github.io/homepage/
 
 ![homepage](https://github.com/ArturZak-269/homepage/blob/main/images/Website-Preview.png?raw=true)
