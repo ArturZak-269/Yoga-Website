@@ -18,7 +18,7 @@ I'm excited to share my passion for beloved series and hobbies with you. Navigat
 ## DEMO + Preview
 https://arturzak-269.github.io/homepage/
 
-![homepage](https://github.com/artur-zak269/homepage/blob/main/images/Website-Preview.png?raw=true)
+![homepage](https://github.com/ArturZak-269/homepage/blob/main/images/Website-Preview.png?raw=true)
 
 ## Author
 Created by Artur Żak.
