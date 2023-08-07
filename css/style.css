@@ -29,11 +29,15 @@ body {
   background: #1f241f;
   border-radius: 25px;
   box-shadow: inset 1px 1px 16px 0 #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .titleBlock h1 {
   margin: 20px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 .titleBlock h1:hover {
@@ -43,15 +47,11 @@ body {
 .titleBlock button {
   border: none;
   background: none;
-  margin-right: 140px;
   display: inline-block;
   cursor: pointer;
-  margin: 0;
+  margin-right: 40px;
   padding: 0;
-}
-
-.moon {
-  margin-right: 44%;
+  align-self: center;
 }
 
 .moon:hover {
@@ -82,7 +82,7 @@ body {
   margin: 15px;
   cursor: pointer;
   text-decoration: none;
- }
+}
 
 .navigation__link {
   color: white;
