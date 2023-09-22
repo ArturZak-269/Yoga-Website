@@ -1,40 +1,49 @@
-// Funkcja, która sprawdza, czy użytkownik zaakceptował pliki cookie
-function checkCookiesAccepted() {
-  // Sprawdź, czy istnieje odpowiednia zmienna cookie
-  const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+const darkTheme = document.getElementById("themeSwitch");
+const body = document.body;
+const line = document.querySelectorAll(".line");
+const visitedLinkElements = document.querySelectorAll(".link:visited");
+const unvisitedLinkElements = document.querySelectorAll(".link:link");
+const moonButton = darkTheme.querySelector("img");
 
-  // Jeśli użytkownik zaakceptował pliki cookie, ukryj komunikat
-  if (cookiesAccepted === "true") {
-    const cookiesPopup = document.getElementById("cookies-popup");
-    cookiesPopup.style.display = "none";
+darkTheme.addEventListener("click", () => {
+  darkTheme.classList.toggle("light");
+
+  if (darkTheme.classList.contains("light") === false) {
+    body.style.background = "#272020";
+    body.style.color = "white";
+    darkTheme.style.opacity = "1";
+
+    line.forEach((line) => {
+      line.style.background = "white";
+    });
+
+    visitedLinkElements.forEach((visitedLinkElements) => {
+      visitedLinkElements.style.color = "#63095b";
+    });
+
+    unvisitedLinkElements.forEach((unvisitedLinkElements) => {
+      unvisitedLinkElements.style.color = "#4091BA";
+    });
+
+    // Update the button's image source for dark mode
+    moonButton.src = "https://i.postimg.cc/5yqJc0JW/Light-Moon.png";
+  } else {
+    body.style.background = "white";
+    body.style.color = "black";
+
+    line.forEach((line) => {
+      line.style.background = "black";
+    });
+
+    visitedLinkElements.forEach((visitedLinkElements) => {
+      visitedLinkElements.style.color = "#63095b";
+    });
+
+    unvisitedLinkElements.forEach((unvisitedLinkElements) => {
+      unvisitedLinkElements.style.color = "#26586f";
+    });
+
+    // Update the button's image source for light mode
+    moonButton.src = "https://i.postimg.cc/tTcZ1Bn4/Dark-Moon.png";
   }
-}
-
-// Funkcja, która ustawia zmienną cookie po zaakceptowaniu plików cookie
-function setCookiesAccepted() {
-  localStorage.setItem("cookiesAccepted", "true");
-}
-
-// Funkcja obsługująca kliknięcie przycisku "Zaakceptuj" w komunikacie o plikach cookie
-function acceptCookies() {
-  const cookiesPopup = document.getElementById("cookies-popup");
-  cookiesPopup.style.display = "none";
-  setCookiesAccepted();
-}
-
-// Funkcja obsługująca kliknięcie przycisku "Odrzuć" w komunikacie o plikach cookie
-function rejectCookies() {
-  const cookiesPopup = document.getElementById("cookies-popup");
-  cookiesPopup.style.display = "none";
-}
-
-// Sprawdź, czy użytkownik zaakceptował pliki cookie po załadowaniu strony
-checkCookiesAccepted();
-
-// Dodaj obsługę kliknięć przycisków
-document
-  .getElementById("accept-cookies")
-  .addEventListener("click", acceptCookies);
-document
-  .getElementById("reject-cookies")
-  .addEventListener("click", rejectCookies);
+});
