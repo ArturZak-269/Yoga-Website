@@ -1,197 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BEM</title>
-    <link rel="icon" href="images/AZ.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga with Eliza</title>
     <meta property="og:image" content="images/share.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    <link rel="icon" href="images/website-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/navigation.css" rel="stylesheet" />
-    <link href="css/table.css" rel="stylesheet" />
-    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/navigation.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+
     <script defer src="js/script.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap"
+        rel="stylesheet">
+</head>
 
+<body class="body js-body">
+    <header class="header js-header">
+        <a href="#header__name" class="header__name">Yoga with Eliza</a>
+        <nav class="navigation">
+            <a href="#o-mnie" class="navigation__item">O mnie</a>
+            <a href="#zainteresowania" class="navigation__item">Zainteresowania</a>
+            <a href="contact.html" class="navigation__item">Kontakt</a>
+        </nav>
 
-<body id="body">
-    <header class="titleBlock">
-        <h1>Trochę o mnie</h1>
-        <button id="themeSwitch" class="light">
-            <img class="moon" width="120" src="https://i.postimg.cc/tTcZ1Bn4/Dark-Moon.png" alt="moon" />
-        </button>
     </header>
-
-
-    <nav class="navigation">
-        <ul>
-            <li class="navigation__list"> <a class="navigation__link" href="#series">Seriale</a> </li>
-            <li class="navigation__list"> <a class="navigation__link" href="#hobbies">Hobby</a> </li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="series">
-            <div class="table__Container">
-                <table class="table">
-                    <caption class="table__caption">
-                        Moje ulubione seriale
-                    </caption>
+        <div class="container" id="header__name">
 
-                    <tr>
-                        <th class="table__Cell table__Header" scope="col">Tytuł</th>
-                        <th class="table__Cell table__Header" scope="col">Lata emisji</th>
-                        <th class="table__Cell table__Header" scope="col">Ilość sezonów</th>
-                        <th class="table__Cell table__Header" scope="col">Gatunek</th>
-                        <th class="table__Cell table__Header" scope="col">Gdzie obejrzeć - STREAM</th>
-                    </tr>
-                    <tbody>
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">The Office (US)</th>
-                            <td class="table__Cell">2005-2013</td>
-                            <td class="table__Cell">9</td>
-                            <td class="table__Cell" rowspan="4">Komedia</td>
-                            <td class="table__Cell"> <a class="table__Cell--link"
-                                    href="https://play.hbomax.com/page/urn:hbo:page:GYRsKbA3gmIjDwgEAAAMH:type:series">
-                                    HBO Max
-                                </a>
-                        </tr>
-
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">Parks and Recreations</th>
-                            <td class="table__Cell">2009-2015</td>
-                            <td class="table__Cell">7</td>
-                            <td class="table__Cell"> <a class="table__Cell--link"
-                                    href="https://play.hbomax.com/page/urn:hbo:page:GYh9YiQJDHrITrgEAAAAC:type:series">
-                                    HBO Max
-                                </a> </td>
-                        </tr>
-
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">Jess i chłopaki</th>
-                            <td class="table__Cell">2011-2018</td>
-                            <td class="table__Cell">7</td>
-                            <td class="table__Cell"> <a class="table__Cell--link"
-                                    href="https://www.disneyplus.com/en-gb/series/jess-i-chopaki/68TQgz0mtxwT">
-                                    Disney +
-                                </a>
-                        </tr>
-
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">Współczesna rodzina</th>
-                            <td class="table__Cell">2009-2020</td>
-                            <td class="table__Cell">11</td>
-                            <td class="table__Cell"> <a class="table__Cell--link"
-                                    href="https://www.disneyplus.com/en-gb/series/modern-family/6p2yzz9mh8Kp">
-                                    Disney +
-                                </a>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row"> Brooklyn 9-9 </th>
-                            <td class="table__Cell">2013 - 2021</td>
-                            <td class="table__Cell">8</td>
-                            <td class="table__Cell">Komedia Kryminalna</td>
-                            <td class="table__Cell"> <a class="table__Cell--link" href="https://www.netflix.com/pl/title/70281562">
-                                    Netflix
-                                </a>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">After Life</th>
-                            <td class="table__Cell">2019-2022</td>
-                            <td class="table__Cell">3</td>
-                            <td class="table__Cell" rowspan="2"> Dramat, Komedia</td>
-                            <td class="table__Cell"> <a class="table__Cell--link" a href="https://www.netflix.com/pl/title/80998491">
-                                    Netflix
-                                </a>
-                        </tr>
-
-                        <tr>
-                            <th class="table__Cell table__Header" scope="row">Hoży doktorzy</th>
-                            <td class="table__Cell">2001-2010</td>
-                            <td class="table__Cell">9</td>
-                            <td class="table__Cell"> <a class="table__Cell--link"
-                                    href="https://www.disneyplus.com/en-gb/series/scrubs/1sOHFVbWpbVb">
-                                    Disney +
-                                </a>
-                        </tr>
-                    </tbody>
-                </table>
+        </div>
+        <section class="section js-section__oMnie--font-bright" id="o-mnie">
+            <h2 class="section__header">O mnie</h2>
+            <div>
+                <h3>Wykształcenie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi alias sequi ipsa? Tempora adipisci
+                    corrupti eius perferendis repellendus ea, labore magnam accusantium, architecto, sed obcaecati
+                    excepturi facere recusandae repudiandae perspiciatis?
+                    orem ipsum dolor sit amet consectetur adipisicing elit. Modi alias sequi ipsa? Tempora adipisci
+                    corrupti eius perferendis repellendus ea, labore magnam accusantium, architecto, sed obcaecati
+                    excepturi facere recusandae repudiandae perspiciatis?</p>
             </div>
-
-            <ul>
-                Więcej informacji na Filmweb:
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Biuro-2005-202887" target="_blank">The
-                        Office
-                        (US)</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Parks+and+Recreation-2009-501087    "
-                        target="_blank">Parks and Recreations</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Jess+i+ch%C5%82opaki-2011-620791"
-                        target="_blank">Jess i chłopaki</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Wsp%C3%B3%C5%82czesna+rodzina-2009-518115"
-                        target="_blank">Współczesna rodzina</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Brooklyn+9+9-2013-685359"
-                        target="_blank">Brooklyn 9-9</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/After+Life-2019-824412" target="_blank">After
-                        Life</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.filmweb.pl/serial/Ho%C5%BCy+doktorzy-2001-133968"
-                        target="_blank">Hoży doktorzy</a>
-                </li>
-
-            </ul>
         </section>
+        <section class="section js-section__zainteresowania--font-bright" id="zainteresowania">
+            <h2 class="section__header">Zainteresowania</h2>
+            <div>
+                <p>orem ipsum dolor sit amet consectetur adipisicing elit. Modi alias sequi ipsa? Tempora adipisci
+                    corrupti eius perferendis repellendus ea, labore magnam accusantium, architecto, sed obcaecati
+                    excepturi facere recusandae repudiandae perspiciatis?
+                </p>
 
-        <div class="line"></div>
-        <div class="line"></div>
-                
-        <section id="hobbies">
-            <h2>Reszta moich zainteresowań</h2>
-            <p>
-                Jestem osobą, która uwielbia różnorodność i niezależność. Moje hobby to jazda na rowerze -
-                towarzyszy mi
-                od dłuższego czasu i sprawia mi ogromną radość. Poczucie wolności i przygody, które towarzyszy mi
-                podczas każdej przejażdżki, jest niezastąpione. Odkryłem również pasję do wspinaczki/boulderingu. Od
-                pół
-                roku towarzyszy mi adrenalina i wyzwania, które sprawiają, że czuję się silny i pewny siebie. Ale
-                moje
-                zainteresowania nie kończą się na aktywnościach fizycznych. Ostatnio pochłonęło mnie projektowanie
-                grafik wektorowych. Tworzenie grafik o precyzyjnych kształtach i pięknych liniach staje się dla mnie
-                fascynującym wyzwaniem, które pozwala mi wyrazić swoją kreatywność. A kiedy potrzebuję momentu
-                relaksu,
-                pływanie to doskonały sposób na odprężenie i utrzymanie formy. Jestem osobą wszechstronną, której
-                zależy
-                na rozwijaniu się w różnych dziedzinach i czerpaniu radości z różnorodności życia.
-            </p>
-        </section>
+            </div>
+            <div class="cookies-modal" id="cookies-modal">
+                <div class="cookies-modal-content">
+                    <h2>Informacja o plikach cookie</h2>
+                    <p>Ta witryna korzysta z plików cookie w celu zapewnienia najlepszych doświadczeń dla użytkowników.
+                    </p>
+                    <p>Klikając "Zaakceptuj" zgadzasz się na użycie plików cookie na tej stronie.</p>
+                    <div class="cookies-modal-buttons">
+                        <button id="accept-cookies">Zaakceptuj</button>
+                        <button id="reject-cookies">Odrzuć</button>
+                    </div>
+                </div>
     </main>
-
-    <footer>
-        © Copyright 2023 by Artur Żak - Wszystkie prawa zastrzeżone
-    </footer>
+    <footer class="footer">© Copyright 2023 by Artur Żak</footer>
 </body>
 
 </html>
