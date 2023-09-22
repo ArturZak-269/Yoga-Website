@@ -1,0 +1,17 @@
+.navigation__item {
+  text-decoration: none;
+  color: #000000;
+  padding: 10px;
+}
+
+.navigation__item:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+.navigation__item:active {
+  color: hsl(0, 0%, 70%);
+}
+
+.navigation__item--font-bright {
+  color: white;
+}
