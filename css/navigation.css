@@ -12,7 +12,7 @@
 }
 
 .navigation__item:hover {
-  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(6px 6px 6px rgb(252, 158, 241));
 }
 
 .navigation__item:active {
