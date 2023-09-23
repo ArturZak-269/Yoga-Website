@@ -6,7 +6,8 @@
 }
 
 .section__header {
-  color: #f5a40e;
+  color: #000000;
+  letter-spacing: 1px;
   font-size: 30px;
   text-align: center;
   padding-bottom: 10px;
