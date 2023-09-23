@@ -9,7 +9,7 @@
   right: 0;
   top: 0;
   background-color: rgb(248, 221, 245);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgb(240, 167, 232);
 }
 
 .header__logo {
@@ -19,8 +19,9 @@
   letter-spacing: 5px;
   box-shadow: none;
   text-decoration: none;
+  filter: drop-shadow(6px 6px 6px rgb(240, 167, 232));
 }
 
 .header__logo:hover {
-  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(6px 6px 6px rgba(241, 201, 237));
 }
