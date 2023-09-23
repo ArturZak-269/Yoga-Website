@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px 10px;
   margin: 0;
-  position: sticky; /* header goes down and up while scroccling */
+  position: sticky; /* header goes down and up while scrolling */
   left: 0;
   right: 0;
   top: 0;
@@ -12,14 +12,15 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.header__name {
+.header__logo {
   color: #000000;
   font-size: 32px;
   font-weight: 700;
+  letter-spacing: 5px;
   box-shadow: none;
   text-decoration: none;
 }
 
-.header__name:hover {
-  color: hsl(39, 92%, 64%);
+.header__logo:hover {
+  filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5));
 }
