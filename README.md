@@ -30,7 +30,7 @@ If you find our website helpful, don't forget to show your support by starring o
 
 Embark on a path of self-discovery, health, and inner peace with Creative Yoga. Start your journey today!
 
-![Yoga in Nature](images/yoga-nature.jpg)
+![Yoga in Nature](images/yoga-nature.png)
 
 ## Technologies Used
 - HTML
