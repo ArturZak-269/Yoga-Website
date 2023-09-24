@@ -1,11 +1,18 @@
+/* Stylizuj stopkę */
 .footer {
   color: #000000;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 500;
   font-style: bold;
-  background: rgb(248, 219, 244);
+  background: rgb(248, 221, 245);
+  box-shadow: 0 0 2px rgb(240, 167, 232);
   padding: 15px;
-  margin-top: 60px;
   text-align: center;
+  padding: 10px 0;
+}
+
+/* Stylizuj pojemnik dla stopki */
+.footer-container {
+  margin-top: auto; /* Upewnij się, że stopka zawsze jest na dole */
 }
