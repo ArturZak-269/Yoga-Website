@@ -8,26 +8,6 @@
   top: 0;
   background-color: rgb(245, 228, 243);
   z-index: 1000;
-  box-shadow: 0 0 2px rgb(2, 2, 2);
-}
-
-.header__home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 200px 20px 20px;
-  margin: 0;
-  position: sticky; /* header goes down and up while scrolling */
-  left: 0;
-  right: 0;
-  top: 0;
-  background-color: rgb(248, 221, 245);
-  box-shadow: 0 0 2px rgb(240, 167, 232);
-  background-image: url("../images/yoga-example.png");
-  background-size: cover; /* You can adjust this based on your needs */
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 20px 200px 20px 20px; /* You can adjust this padding as well */
 }
 
 .header__logo {
