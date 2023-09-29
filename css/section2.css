@@ -2,25 +2,53 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr); /* Increased the number of rows */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
 
 .aboutMe__content {
-  grid-area: 1 / 1 / 4 / 2;
+  grid-area: 1 / 1 / 5 / 2; /* Spanning four rows on the left side */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 100px;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
 }
 
 .lisa__portret {
   width: 600px; /* Adjust the width as needed */
   object-fit: cover;
-  grid-area: 1 / 2 / 4 / 3;
   background-color: rgb(245, 228, 243); /* Set the desired background color */
   mix-blend-mode: luminosity;
+  grid-area: 1 / 2 / 5 / 3; /* Spanning four rows on the right side */
+}
+
+/* Style the images */
+.instagram,
+.facebook {
+  width: 40px; /* Adjust the width as needed */
+  object-fit: cover;
+  border: 1px #ccc;
+  margin: 0 40px; /* Add more spacing between the images */
+  background-color: rgb(245, 228, 243); /* Set the desired background color */
+  mix-blend-mode: luminosity;
+}
+
+.youtube {
+  width: 60px; /* Adjust the width as needed */
+  object-fit: cover;
+  border: 1px #ccc;
+  margin: 0 40px; /* Add more spacing between the images */
+  background-color: rgb(245, 228, 243); /* Set the desired background color */
+  mix-blend-mode: luminosity;
+}
+/* Center the images below the text */
+.images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section__header {
