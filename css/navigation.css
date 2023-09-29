@@ -1,4 +1,4 @@
-.navigation__item {
+.navigation__item2 {
   position: inherit;
   text-decoration: none;
   font-family: "Inter", sans-serif;
@@ -9,6 +9,22 @@
   text-decoration-thickness: auto;
   -webkit-font-smoothing: antialiased;
   color: #ffffff;
+  padding: 10px;
+  margin: 0 10px;
+
+  /* filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5)); */
+}
+.navigation__item {
+  position: inherit;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  -webkit-font-smoothing: antialiased;
+  color: #000000;
   padding: 10px;
   margin: 0 10px;
 

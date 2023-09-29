@@ -8,6 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+.mainBody {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(255, 255, 255);
+  line-height: 1.2;
+  margin: 0;
+}
+
 .body {
   font-family: "Josefin Sans", sans-serif;
   background-color: rgb(245, 228, 243);
