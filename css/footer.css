@@ -11,8 +11,3 @@
   text-align: center;
   padding: 10px 0;
 }
-
-/* Stylizuj pojemnik dla stopki */
-.footer-container {
-  margin-top: auto; /* Upewnij się, że stopka zawsze jest na dole */
-}
