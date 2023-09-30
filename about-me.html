@@ -18,6 +18,7 @@
     <link href="css/navigation.css" rel="stylesheet">
     <link href="css/section2.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/translations.js"></script>
     <script defer src="js/script.js"></script>
 
 </head>
@@ -28,23 +29,26 @@
             <img src="images/logo-yoga2.png" width="100" class="header__logo" alt="yoga-logo">
         </a>
         <nav class="navigation">
-            <a href="about-me.html" class="navigation__item navigation__item--active">O MNIE</a>
-            <a href="index.html" class="navigation__item">GALERIA</a>
-            <a href="contact.html" class="navigation__item">KONTAKT</a>
+            <a href="about-me.html" class="navigation__item navigation__item--active" data-translate="navAbout">O
+                MNIE</a>
+            <a href="index.html" class="navigation__item" data-translate="navGallery">GALERIA</a>
+            <a href="contact.html" class="navigation__item" data-translate="navContact">KONTAKT</a>
         </nav>
-
+        <div class="header__flags">
+            <button id="plFlag" class="flag-button"><img src="images/PolandFlag.png" alt="PolishFlag"></button>
+            <button id="enFlag" class="flag-button"><img src="images/BritishFlag.png" alt="BritishFlag"></button>
+            <button id="uaFlag" class="flag-button"><img src="images/UkraineFlag.png" alt="UkrainianFlag"></button>
+        </div>
     </header>
     <main>
         <div class="container">
-
         </div>
         <section class="section__aboutMe" id="o-mnie">
             <div class="aboutMe__content">
-
-                <h2 class="section__header">Kim jestem?</h2>
-                <h3>twój ulubiony nauczyciel jogi</h3>
-                <p>Mam bardzo dobry pomysł, jak widziałeś na naszej stronie, mamy wiele różnych stylów
-                    jogi. Zastanawiam się, czy chciałbyś wypróbować któryś z nich?</p>
+                <h2 class="section__header" data-translate="aboutMeHeader">Kim jestem?</h2>
+                <h3 data-translate="aboutMeSubheader">twój ulubiony nauczyciel jogi</h3>
+                <p data-translate="aboutMeText">Mam bardzo dobry pomysł, jak widziałeś na naszej stronie, mamy wiele
+                    różnych stylów jogi. Zastanawiam się, czy chciałbyś wypróbować któryś z nich?</p>
                 <div class="images-row">
                     <img src="images/insta.png" class="instagram" alt="InstagramButton">
                     <img src="images/YT.png" class="youtube" alt="YoutubeButton">
@@ -53,13 +57,10 @@
             </div>
             <img src="images/Lisa_portret.png" class="lisa__portret" alt="Image 1">
         </section>
-
     </main>
-
     <!-- <footer class="footer">
         © Copyright 2023 by Artur Żak
     </footer> -->
-
 </body>
 
 </html>
