@@ -2,15 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 300px 500px 20px;
+  padding: 10px 150px 500px 20px;
   margin: 0;
-  left: 0;
-  right: 0;
   top: 0;
   background-image: url("../images/yoga-example.png");
   background-size: cover; /* You can adjust this based on your needs */
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.header__flags {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust the gap between flags */
+}
+
+.header__flags img {
+  width: 30px; /* Adjust the width of the flags */
+  height: auto; /* Maintain the aspect ratio */
 }
 
 .header__logo {

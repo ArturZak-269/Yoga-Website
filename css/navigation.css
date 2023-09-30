@@ -1,3 +1,10 @@
+.navigation {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 900px;
+  gap: 10px; /* Adjust the gap between navigation items */
+}
+
 .navigation__item2 {
   position: inherit;
   text-decoration: none;
@@ -14,6 +21,7 @@
 
   /* filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5)); */
 }
+
 .navigation__item {
   position: inherit;
   text-decoration: none;
@@ -41,8 +49,4 @@
 
 .navigation__item:active {
   color: hsl(0, 0%, 70%);
-}
-
-.navigation__item--font-bright {
-  color: white;
 }

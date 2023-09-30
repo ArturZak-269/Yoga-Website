@@ -2,12 +2,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 300px 20px 20px;
+  padding: 10px 150px 20px 20px;
   margin: 0;
-  position: sticky; /* header goes down and up while scrolling */
+  position: sticky;
   top: 0;
   background-color: rgb(245, 228, 243);
   z-index: 1000;
+}
+
+.header__flags {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Dodaj styl dla przycisków flag aktywnych */
+.header__flags .active-flag,
+.header__flags .flag-button.active-flag {
+  background: none; /* Usuń tło */
+  border: none; /* Usuń obramowanie */
+  padding: 0; /* Usuń wewnętrzny odstęp */
+  cursor: pointer;
+}
+
+.header__flags .active-flag img,
+.header__flags .flag-button.active-flag img {
+  width: 30px;
+  height: auto;
+  filter: grayscale(0%);
+  transition: filter 0.3s;
+}
+
+/* Dodaj styl dla przycisków flag szarych (nieaktywnych) */
+.header__flags .flag-button:not(.active-flag) {
+  background: none; /* Usuń tło */
+  border: none; /* Usuń obramowanie */
+  padding: 0; /* Usuń wewnętrzny odstęp */
+  cursor: pointer;
+}
+
+.header__flags .flag-button:not(.active-flag) img {
+  width: 30px;
+  height: auto;
+  filter: grayscale(80%);
+  transition: filter 0.3s;
 }
 
 .header__logo {
