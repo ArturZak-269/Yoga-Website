@@ -60,3 +60,20 @@
 .header__logo:hover {
   filter: drop-shadow(6px 6px 6px rgba(241, 201, 237));
 }
+
+@media (max-width: 576px) {
+  .header {
+    padding: 10px 20px; /* Dostosuj padding */
+  }
+  .header__logo,
+  .header__flags {
+    display: none;
+  }
+}
+
+/* Stylizacja dla ekranów o szerokości poniżej 300px */
+@media (max-width: 300px) {
+  .header {
+    padding: 10px; /* Dostosuj padding */
+  }
+}
