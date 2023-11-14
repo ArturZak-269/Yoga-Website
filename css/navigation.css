@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   align-items: flex-start;
-  margin-left: 900px;
+  margin-left: 700px;
   gap: 10px; /* Adjust the gap between navigation items */
 }
 
@@ -49,4 +49,10 @@
 
 .navigation__item:active {
   color: hsl(0, 0%, 70%);
+}
+
+@media (max-width: 576px) {
+  .navigation {
+    display: none;
+  }
 }
