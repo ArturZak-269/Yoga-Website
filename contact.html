@@ -2,58 +2,153 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <meta property="og:image" content="images/share.png">
-    <link rel="icon" href="images/website-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,600&display=swap"
-        rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link href="css/header2.css" rel="stylesheet">
-    <link href="css/navigation.css" rel="stylesheet">
-    <link href="css/section.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script defer src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Creative Yoga</title>
+  <meta name="description" content="Skontaktuj się z Creative Yoga. Zapisz się na zajęcia w Krakowie.">
+  <meta property="og:image" content="images/share.png">
+  <link rel="icon" href="images/website-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/header2.css" rel="stylesheet">
+  <link href="css/navigation.css" rel="stylesheet">
+  <link href="css/section.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
+  <script defer src="js/translations.js"></script>
+  <script defer src="js/script.js"></script>
 </head>
 
-<body class="body">
-    <header class="header">
-        <a href="index.html">
-            <img src="images/yoga-logo2.png" width="100" class="header__logo" alt="yoga-logo">
-        </a>
-        <nav class="navigation">
-            <a href="about-me.html" class="navigation__item">O MNIE</a>
-            <a href="index.html" class="navigation__item">GALERIA</a>
-            <a href="contact.html" class="navigation__item navigation__item--active ">KONTAKT</a>
-        </nav>
-        <div class="header__flags">
-            <button id="plFlag" class="flag-button"><img src="images/PolandFlag.png" alt="PolishFlag"></button>
-            <button id="enFlag" class="flag-button"><img src="images/BritishFlag.png" alt="BritishFlag"></button>
-            <button id="uaFlag" class="flag-button"><img src="images/UkraineFlag.png" alt="UkrainianFlag"></button>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="header" id="main-header">
+    <a href="index.html">
+      <img src="images/yoga-logo2.png" width="88" class="header__logo" alt="Creative Yoga">
+    </a>
+    <nav class="navigation">
+      <a href="about-me.html" class="navigation__item" data-translate="navAbout">O MNIE</a>
+      <a href="index.html" class="navigation__item" data-translate="navGallery">GALERIA</a>
+      <a href="contact.html" class="navigation__item navigation__item--active" data-translate="navContact">KONTAKT</a>
+    </nav>
+    <div class="header__flags">
+      <button id="plFlag" class="flag-button active-flag"><img src="images/PolandFlag.png" alt="PL"></button>
+      <button id="enFlag" class="flag-button"><img src="images/BritishFlag.png" alt="EN"></button>
+      <button id="uaFlag" class="flag-button"><img src="images/UkraineFlag.png" alt="UA"></button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </header>
+
+  <!-- ── Mobile Nav ── -->
+  <div class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav__links">
+      <a href="about-me.html" data-translate="navAbout">O MNIE</a>
+      <a href="index.html" data-translate="navGallery">GALERIA</a>
+      <a href="contact.html" class="active" data-translate="navContact">KONTAKT</a>
+    </nav>
+    <div class="mobile-nav__flags">
+      <button id="plFlagMobile" class="flag-button active-flag"><img src="images/PolandFlag.png" alt="PL"></button>
+      <button id="enFlagMobile" class="flag-button"><img src="images/BritishFlag.png" alt="EN"></button>
+      <button id="uaFlagMobile" class="flag-button"><img src="images/UkraineFlag.png" alt="UA"></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ── Page Hero ── -->
+    <section class="page-hero">
+      <span class="page-hero__eyebrow" data-translate="contactEyebrow">Napisz do mnie</span>
+      <h1 class="page-hero__title" data-translate="contactTitle">Kontakt</h1>
+    </section>
+
+    <!-- ── Contact Section ── -->
+    <section class="contact-section">
+      <div class="contact-section__grid">
+
+        <!-- Form -->
+        <div class="reveal">
+          <h2 class="contact-section__title" data-translate="contactFormTitle">Wyślij wiadomość</h2>
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-group">
+              <label for="name" data-translate="formName">Imię i nazwisko</label>
+              <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-translate="formEmail">Adres e-mail</label>
+              <input type="email" id="email" name="email" placeholder="jan@przykład.pl" required>
+            </div>
+            <div class="form-group">
+              <label for="subject" data-translate="formSubject">Temat</label>
+              <input type="text" id="subject" name="subject" placeholder="Zapytanie o zajęcia">
+            </div>
+            <div class="form-group">
+              <label for="message" data-translate="formMessage">Wiadomość</label>
+              <textarea id="message" name="message" placeholder="Napisz do mnie..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" data-translate="formSubmit">Wyślij wiadomość</button>
+          </form>
         </div>
-    </header>
-    <main>
-        <section class="section" id="kontakt">
-            <h1 class="section__header">Kontakt</h1>
-            <p class="text"><strong>E-mail:</strong> przyklad@email.com
-                <br><strong>Telefon</strong>: 123-456-789
-            <h2 class="section__header">Gdzie mnie znaleźć?</h2>
-            <p class="text"><strong>Adres:</strong> Henryka Siemiradzkiego 17/1
-            </p>
 
-            <!-- Osadź mapę Google -->
-            <iframe width="100%" height="450" frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBU6aE8itOSB6rgyWIwLLXKhMndAfg_cBY&q=Siemiradzkiego%2017/1%20Kraków"
-                allowfullscreen>
-            </iframe>
-        </section>
-    </main>
-    <!-- <footer class="footer">© Copyright 2023 by Artur Żak</footer> -->
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <div class="contact-info__card">
+            <h4 data-translate="contactInfoEmail">E-mail</h4>
+            <p>przyklad@email.com</p>
+          </div>
+          <div class="contact-info__card">
+            <h4 data-translate="contactInfoPhone">Telefon</h4>
+            <p>+48 123 456 789</p>
+          </div>
+          <div class="contact-info__card">
+            <h4 data-translate="contactInfoAddress">Adres</h4>
+            <p>ul. Henryka Siemiradzkiego 17/1<br>Kraków</p>
+          </div>
+          <div class="contact-info__card">
+            <h4 data-translate="contactInfoHours">Godziny zajęć</h4>
+            <p>Pon–Pt: 7:00 – 21:00<br>Sob–Nd: 9:00 – 18:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Map ── -->
+    <div class="map-section reveal">
+      <iframe
+        height="420"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBU6aE8itOSB6rgyWIwLLXKhMndAfg_cBY&q=Siemiradzkiego%2017/1%20Kraków">
+      </iframe>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/yoga-logo2.png" alt="Creative Yoga">
+        <p>Creative Yoga</p>
+      </div>
+      <div class="footer__links">
+        <a href="about-me.html" data-translate="navAbout">O Mnie</a>
+        <a href="index.html" data-translate="navGallery">Galeria</a>
+        <a href="contact.html" data-translate="navContact">Kontakt</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><img src="images/insta.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="#" aria-label="YouTube"><img src="images/YT.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <p>© 2025 Creative Yoga by Artur Żak</p>
+    </div>
+  </footer>
+
 </body>
-
 </html>

@@ -1,79 +1,110 @@
+/* ── Unified sticky header ── */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 150px 20px 20px;
-  margin: 0;
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: rgb(245, 228, 243);
-  z-index: 1000;
-}
-
-.header__flags {
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-/* Dodaj styl dla przycisków flag aktywnych */
-.header__flags .active-flag,
-.header__flags .flag-button.active-flag {
-  background: none; /* Usuń tło */
-  border: none; /* Usuń obramowanie */
-  padding: 0; /* Usuń wewnętrzny odstęp */
-  cursor: pointer;
+.header.scrolled {
+  box-shadow: var(--shadow-sm);
 }
 
-.header__flags .active-flag img,
-.header__flags .flag-button.active-flag img {
-  width: 30px;
-  height: auto;
-  filter: grayscale(0%);
-  transition: filter 0.3s;
+/* Hero-page: start transparent, solidify on scroll */
+body.hero-page .header {
+  background: transparent;
+  border-bottom-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
-/* Dodaj styl dla przycisków flag szarych (nieaktywnych) */
-.header__flags .flag-button:not(.active-flag) {
-  background: none; /* Usuń tło */
-  border: none; /* Usuń obramowanie */
-  padding: 0; /* Usuń wewnętrzny odstęp */
-  cursor: pointer;
+body.hero-page .header.scrolled {
+  background: var(--surface);
+  border-bottom-color: var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
-.header__flags .flag-button:not(.active-flag) img {
-  width: 30px;
-  height: auto;
-  filter: grayscale(80%);
-  transition: filter 0.3s;
-}
-
+/* Logo */
 .header__logo {
-  position: inherit;
-  color: #000000;
-  box-shadow: none;
-  text-decoration: none;
-  cursor: pointer;
-  filter: drop-shadow(6px 6px 6px rgb(240, 167, 232));
+  transition: opacity var(--transition), filter var(--transition);
 }
 
 .header__logo:hover {
-  filter: drop-shadow(6px 6px 6px rgba(241, 201, 237));
+  opacity: 0.75;
 }
 
-@media (max-width: 576px) {
+body.hero-page .header:not(.scrolled) .header__logo {
+  filter: brightness(100);
+}
+
+/* Flag buttons */
+.header__flags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag-button {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.flag-button img {
+  width: 28px;
+  height: auto;
+  display: block;
+  border-radius: 3px;
+  transition: filter var(--transition), opacity var(--transition);
+}
+
+.flag-button:not(.active-flag) img {
+  filter: grayscale(70%);
+  opacity: 0.55;
+}
+
+.flag-button:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.flag-button.active-flag img {
+  filter: none;
+  opacity: 1;
+}
+
+/* Hero-page flag buttons: white tint when transparent */
+body.hero-page .header:not(.scrolled) .flag-button:not(.active-flag) img {
+  filter: grayscale(100%) brightness(3);
+  opacity: 0.5;
+}
+
+body.hero-page .header:not(.scrolled) .flag-button.active-flag img {
+  filter: brightness(3);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
   .header {
-    padding: 10px 20px; /* Dostosuj padding */
+    padding: 0 20px;
   }
-  .header__logo,
+
   .header__flags {
     display: none;
-  }
-}
-
-/* Stylizacja dla ekranów o szerokości poniżej 300px */
-@media (max-width: 300px) {
-  .header {
-    padding: 10px; /* Dostosuj padding */
   }
 }

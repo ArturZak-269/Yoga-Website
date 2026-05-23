@@ -2,74 +2,134 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Yoga</title>
-    <meta property="og:image" content="images/share.png">
-    <link rel="icon" href="images/website-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,600&display=swap"
-        rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link href="css/header2.css" rel="stylesheet">
-    <link href="css/mobile.css" rel="stylesheet">
-    <link href="css/navigation.css" rel="stylesheet">
-    <link href="css/section2.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <script defer src="js/translations.js"></script>
-    <script defer src="js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O mnie — Creative Yoga</title>
+  <meta name="description" content="Poznaj swojego nauczyciela jogi. Creative Yoga — Kraków.">
+  <meta property="og:image" content="images/share.png">
+  <link rel="icon" href="images/website-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/header2.css" rel="stylesheet">
+  <link href="css/navigation.css" rel="stylesheet">
+  <link href="css/section2.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
+  <link href="css/mobile.css" rel="stylesheet">
+  <script defer src="js/translations.js"></script>
+  <script defer src="js/script.js"></script>
 </head>
 
-<body class="body">
-    <header class="header">
-        <a href="index.html">
-            <img src="images/yoga-logo2.png" width="100" class="header__logo" alt="yoga-logo">
-        </a>
-        <nav class="navigation">
-            <a href="about-me.html" class="navigation__item navigation__item--active" data-translate="navAbout">O
-                MNIE</a>
-            <a href="index.html" class="navigation__item" data-translate="navGallery">GALERIA</a>
-            <a href="contact.html" class="navigation__item" data-translate="navContact">KONTAKT</a>
-        </nav>
-        <div class="header__flags">
-            <button id="plFlag" class="flag-button"><img src="images/PolandFlag.png" alt="PolishFlag"></button>
-            <button id="enFlag" class="flag-button"><img src="images/BritishFlag.png" alt="BritishFlag"></button>
-            <button id="uaFlag" class="flag-button"><img src="images/UkraineFlag.png" alt="UkrainianFlag"></button>
-        </div>
-        <button id="mobileMenuButton" class="mobile-menu-button">&#9776;</button>
-    </header>
-    <main>
-        <div class="mobileMenu collapsed">
-            <ul>
-                <li><a href="#">Strona główna</a></li>
-                <li><a href="#">O mnie</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </div>
-        <div class="container">
-        </div>
-        <section class="section__aboutMe" id="o-mnie">
-            <div class="aboutMe__content">
-                <h2 class="section__header" data-translate="aboutMeHeader">Kim jestem?</h2>
-                <h3 data-translate="aboutMeSubheader">twój ulubiony nauczyciel jogi</h3>
-                <p data-translate="aboutMeText">Mam bardzo dobry pomysł, jak widziałeś na naszej stronie, mamy wiele
-                    różnych stylów jogi. Zastanawiam się, czy chciałbyś wypróbować któryś z nich?</p>
-                <div class="images-row">
-                    <img src="images/insta.png" class="instagram" alt="InstagramButton">
-                    <img src="images/YT.png" class="youtube" alt="YoutubeButton">
-                    <img src="images/fb.png" class="facebook" alt="FacebookButton">
-                </div>
-            </div>
-            <img src="images/Lisa_portret.png" class="lisa__portret" alt="Image 1">
-        </section>
-    </main>
-    <!-- <footer class="footer">
-        © Copyright 2023 by Artur Żak
-    </footer> -->
-</body>
+<body>
 
+  <!-- ── Header ── -->
+  <header class="header" id="main-header">
+    <a href="index.html">
+      <img src="images/yoga-logo2.png" width="88" class="header__logo" alt="Creative Yoga">
+    </a>
+    <nav class="navigation">
+      <a href="about-me.html" class="navigation__item navigation__item--active" data-translate="navAbout">O MNIE</a>
+      <a href="index.html" class="navigation__item" data-translate="navGallery">GALERIA</a>
+      <a href="contact.html" class="navigation__item" data-translate="navContact">KONTAKT</a>
+    </nav>
+    <div class="header__flags">
+      <button id="plFlag" class="flag-button active-flag"><img src="images/PolandFlag.png" alt="PL"></button>
+      <button id="enFlag" class="flag-button"><img src="images/BritishFlag.png" alt="EN"></button>
+      <button id="uaFlag" class="flag-button"><img src="images/UkraineFlag.png" alt="UA"></button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Otwórz menu">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </header>
+
+  <!-- ── Mobile Nav ── -->
+  <div class="mobile-nav" id="mobile-nav">
+    <nav class="mobile-nav__links">
+      <a href="about-me.html" class="active" data-translate="navAbout">O MNIE</a>
+      <a href="index.html" data-translate="navGallery">GALERIA</a>
+      <a href="contact.html" data-translate="navContact">KONTAKT</a>
+    </nav>
+    <div class="mobile-nav__flags">
+      <button id="plFlagMobile" class="flag-button active-flag"><img src="images/PolandFlag.png" alt="PL"></button>
+      <button id="enFlagMobile" class="flag-button"><img src="images/BritishFlag.png" alt="EN"></button>
+      <button id="uaFlagMobile" class="flag-button"><img src="images/UkraineFlag.png" alt="UA"></button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ── Page Hero ── -->
+    <section class="page-hero">
+      <span class="page-hero__eyebrow" data-translate="aboutEyebrow">Instruktor jogi</span>
+      <h1 class="page-hero__title" data-translate="aboutMeHeader">Kim jestem?</h1>
+    </section>
+
+    <!-- ── About Section ── -->
+    <section class="about-section">
+      <div class="about-section__grid">
+        <div class="about-section__image-wrap reveal">
+          <img src="images/Lisa_portret.png" alt="Instruktor jogi">
+        </div>
+        <div class="about-section__content reveal">
+          <h2 data-translate="aboutMeHeader">Kim jestem?</h2>
+          <h3 data-translate="aboutMeSubheader">twój ulubiony nauczyciel jogi</h3>
+          <p data-translate="aboutMeText">Mam bardzo dobry pomysł, jak widziałeś na naszej stronie, mamy wiele różnych stylów jogi. Zastanawiam się, czy chciałbyś wypróbować któryś z nich?</p>
+
+          <div class="about-section__stats">
+            <div class="stat">
+              <span class="stat__number">8+</span>
+              <span class="stat__label" data-translate="statYears">Lat doświadczenia</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">500+</span>
+              <span class="stat__label" data-translate="statStudents">Studentów</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">3</span>
+              <span class="stat__label" data-translate="statStyles">Style jogi</span>
+            </div>
+          </div>
+
+          <div class="about-section__social">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <img src="images/insta.png" alt="Instagram">
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="images/fb.png" alt="Facebook">
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <img src="images/YT.png" alt="YouTube">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/yoga-logo2.png" alt="Creative Yoga">
+        <p>Creative Yoga</p>
+      </div>
+      <div class="footer__links">
+        <a href="about-me.html" data-translate="navAbout">O Mnie</a>
+        <a href="index.html" data-translate="navGallery">Galeria</a>
+        <a href="contact.html" data-translate="navContact">Kontakt</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram"><img src="images/insta.png" alt="Instagram"></a>
+        <a href="#" aria-label="Facebook"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="#" aria-label="YouTube"><img src="images/YT.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <p>© 2025 Creative Yoga by Artur Żak</p>
+    </div>
+  </footer>
+
+</body>
 </html>

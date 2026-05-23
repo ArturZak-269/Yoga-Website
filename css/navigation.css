@@ -1,57 +1,65 @@
+/* ── Desktop navigation ── */
 .navigation {
   display: flex;
-  align-items: flex-start;
-  margin-left: 700px;
-  gap: 10px; /* Adjust the gap between navigation items */
-}
-
-.navigation__item2 {
-  position: inherit;
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-  -webkit-font-smoothing: antialiased;
-  color: #ffffff;
-  padding: 10px;
-  margin: 0 10px;
-
-  /* filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5)); */
+  align-items: center;
+  gap: 4px;
 }
 
 .navigation__item {
-  position: inherit;
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-decoration-style: solid;
-  text-decoration-thickness: auto;
-  -webkit-font-smoothing: antialiased;
-  color: #000000;
-  padding: 10px;
-  margin: 0 10px;
-
-  /* filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5)); */
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: color var(--transition), background var(--transition);
+  position: relative;
 }
 
-.navigation__item--active {
-  font-weight: 600; /* Pogrubiony styl dla aktywnego przycisku */
+.navigation__item::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: calc(100% - 32px);
+  height: 1.5px;
+  background: var(--sage);
+  border-radius: 2px;
+  transition: transform var(--transition);
+}
+
+.navigation__item:hover::after,
+.navigation__item--active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 .navigation__item:hover {
-  filter: drop-shadow(6px 6px 6px rgb(252, 158, 241));
+  color: var(--sage);
 }
 
-.navigation__item:active {
-  color: hsl(0, 0%, 70%);
+.navigation__item--active {
+  color: var(--sage);
+  font-weight: 600;
 }
 
-@media (max-width: 576px) {
+/* White variant for hero-page transparent header */
+body.hero-page .header:not(.scrolled) .navigation__item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+body.hero-page .header:not(.scrolled) .navigation__item::after {
+  background: var(--white);
+}
+
+body.hero-page .header:not(.scrolled) .navigation__item:hover,
+body.hero-page .header:not(.scrolled) .navigation__item--active {
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
   .navigation {
     display: none;
   }
