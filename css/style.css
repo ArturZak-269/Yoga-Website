@@ -49,6 +49,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 img {
@@ -60,6 +61,17 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Global touch improvements */
+a, button, [role="button"], input[type="submit"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent long words from breaking layout on mobile */
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
 }
 
 /* ── Scroll reveal ── */
@@ -84,6 +96,7 @@ a {
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
+  min-height: 48px;
   border-radius: var(--radius-full);
   font-family: var(--font-heading);
   font-size: 13px;
@@ -93,6 +106,11 @@ a {
   cursor: pointer;
   transition: var(--transition);
   border: 1.5px solid transparent;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  /* prevent text selection on double-tap */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .btn--primary {

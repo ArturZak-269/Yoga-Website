@@ -3,8 +3,12 @@
 ══════════════════════════════════ */
 .hero {
   position: relative;
+  /* 100svh = small viewport height (excludes mobile browser chrome) */
+  height: 100svh;
+  /* fallback for browsers without svh support */
   height: 100vh;
-  min-height: 640px;
+  height: 100svh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
