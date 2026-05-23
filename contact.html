@@ -73,14 +73,14 @@
         <!-- Form -->
         <div class="reveal">
           <h2 class="contact-section__title" data-translate="contactFormTitle">Wyślij wiadomość</h2>
-          <form class="contact-form" onsubmit="return false;">
+          <form class="contact-form" id="contact-form">
             <div class="form-group">
               <label for="name" data-translate="formName">Imię i nazwisko</label>
-              <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+              <input type="text" id="name" name="from_name" placeholder="Jan Kowalski" required>
             </div>
             <div class="form-group">
               <label for="email" data-translate="formEmail">Adres e-mail</label>
-              <input type="email" id="email" name="email" placeholder="jan@przykład.pl" required>
+              <input type="email" id="email" name="reply_to" placeholder="jan@przykład.pl" required>
             </div>
             <div class="form-group">
               <label for="subject" data-translate="formSubject">Temat</label>
@@ -90,7 +90,8 @@
               <label for="message" data-translate="formMessage">Wiadomość</label>
               <textarea id="message" name="message" placeholder="Napisz do mnie..." rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn--primary" data-translate="formSubmit">Wyślij wiadomość</button>
+            <button type="submit" class="btn btn--primary" id="form-submit" data-translate="formSubmit">Wyślij wiadomość</button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -149,6 +150,9 @@
       <p>© 2025 Creative Yoga by Artur Żak</p>
     </div>
   </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </body>
 </html>

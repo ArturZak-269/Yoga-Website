@@ -231,9 +231,13 @@
 }
 
 .card__icon {
-  font-size: 38px;
   margin-bottom: 22px;
-  line-height: 1;
+  line-height: 0;
+  display: flex;
+}
+
+.card__icon svg {
+  display: block;
 }
 
 .card h3 {
@@ -407,6 +411,16 @@
   font-weight: 400;
   text-align: left;
 }
+
+/* Form status message */
+.form-status {
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 20px;
+  transition: var(--transition);
+}
+.form-status.success { color: var(--sage); }
+.form-status.error   { color: #c0392b; }
 
 .map-section {
   padding: 0 32px 90px;
