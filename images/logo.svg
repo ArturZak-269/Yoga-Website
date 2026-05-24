@@ -1,78 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
   <defs>
-    <!-- Petal gradient: deep sage at top → light sage at base -->
-    <linearGradient id="pg" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%"   stop-color="#4a7250"/>
-      <stop offset="100%" stop-color="#8baf8f"/>
-    </linearGradient>
-    <!-- Lighter petal gradient for back petals -->
-    <linearGradient id="pg2" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%"   stop-color="#6B8F6F" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#A8C5AC" stop-opacity="0.4"/>
-    </linearGradient>
-    <!-- Gold gradient for circle -->
+
+    <!--
+      Radial gradient anchored at the logo centre (userSpaceOnUse).
+      Every petal — regardless of rotation — is dark sage near the
+      centre and lightens toward its tip.
+    -->
+    <radialGradient id="rg" cx="28" cy="28" r="21"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="10%"  stop-color="#2e5233"/>
+      <stop offset="60%"  stop-color="#5a8f60"/>
+      <stop offset="100%" stop-color="#8fc496"/>
+    </radialGradient>
+
+    <!-- Gold gradient for rings / centre -->
     <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#d4b96e"/>
-      <stop offset="100%" stop-color="#b8943a"/>
+      <stop offset="0%"   stop-color="#edd070"/>
+      <stop offset="100%" stop-color="#a87828"/>
     </linearGradient>
+
+    <!-- Subtle gold for outer ring -->
+    <linearGradient id="gg2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8c870"/>
+      <stop offset="100%" stop-color="#c09040"/>
+    </linearGradient>
+
   </defs>
 
-  <!-- Outer gold ring -->
-  <circle cx="28" cy="28" r="25.5" stroke="url(#gg)" stroke-width="1" opacity="0.7"/>
+  <!-- ── Outer gold ring ── -->
+  <circle cx="28" cy="28" r="25.5"
+          stroke="url(#gg2)" stroke-width="1"/>
 
-  <!-- ── Lotus petals (back → front) ── -->
+  <!-- ── Faint inner guide ring ── -->
+  <circle cx="28" cy="28" r="19.5"
+          stroke="#6B8F6F" stroke-width="0.35" opacity="0.35"/>
 
-  <!-- Back-left petal (widest, most transparent) -->
-  <path d="M28 44
-           C 10 44  4 30 10 18
-           C 14  9 22  9 28 14
-           C 25 24 24 36 28 44 Z"
-        fill="url(#pg2)" opacity="0.55"/>
+  <!--
+    ── 6 secondary petals ──
+    Shorter (tip at –13), rotated 30° between main petals.
+    Low opacity → creates the layered mandala depth.
+  -->
+  <g transform="translate(28 28)" fill="url(#rg)" opacity="0.32">
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z"/>
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z" transform="rotate(60)"/>
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z" transform="rotate(120)"/>
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z" transform="rotate(180)"/>
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z" transform="rotate(240)"/>
+    <path d="M0 1.5 C-2.8 -0.8 -3.2 -7 0 -13 C3.2 -7 2.8 -0.8 0 1.5Z" transform="rotate(300)"/>
+  </g>
 
-  <!-- Back-right petal -->
-  <path d="M28 44
-           C 46 44 52 30 46 18
-           C 42  9 34  9 28 14
-           C 31 24 32 36 28 44 Z"
-        fill="url(#pg2)" opacity="0.55"/>
+  <!--
+    ── 6 main petals ──
+    Taller (tip at –19.5), evenly spaced at 60°.
+    Full opacity with gradient.
+  -->
+  <g transform="translate(28 28)" fill="url(#rg)">
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z"/>
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z" transform="rotate(60)"/>
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z" transform="rotate(120)"/>
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z" transform="rotate(180)"/>
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z" transform="rotate(240)"/>
+    <path d="M0 2 C-5 -1.5 -5.8 -11 0 -19.5 C5.8 -11 5 -1.5 0 2Z" transform="rotate(300)"/>
+  </g>
 
-  <!-- Middle-left petal -->
-  <path d="M28 44
-           C 12 42  8 28 14 16
-           C 18  8 26  8 28 12
-           C 26 22 25 34 28 44 Z"
-        fill="url(#pg)" opacity="0.75"/>
-
-  <!-- Middle-right petal -->
-  <path d="M28 44
-           C 44 42 48 28 42 16
-           C 38  8 30  8 28 12
-           C 30 22 31 34 28 44 Z"
-        fill="url(#pg)" opacity="0.75"/>
-
-  <!-- Centre petal (front, tallest) -->
-  <path d="M28 44
-           C 24 36 24 22 28  8
-           C 32 22 32 36 28 44 Z"
-        fill="url(#pg)"/>
-
-  <!-- ── Gold centre ornament ── -->
-  <circle cx="28" cy="38" r="4.2"
-          fill="none" stroke="url(#gg)" stroke-width="1.1"/>
-  <circle cx="28" cy="38" r="1.8" fill="#C9A96E"/>
-
-  <!-- Tiny gold accent dots on outer petals -->
-  <circle cx="13" cy="31" r="1.2" fill="#C9A96E" opacity="0.5"/>
-  <circle cx="43" cy="31" r="1.2" fill="#C9A96E" opacity="0.5"/>
-
-  <!-- Stem -->
-  <line x1="28" y1="44" x2="28" y2="50"
-        stroke="#5a7d5e" stroke-width="1.6" stroke-linecap="round"/>
-
-  <!-- Water ripple -->
-  <path d="M20 50 Q28 47 36 50"
-        stroke="url(#gg)" stroke-width="1.2"
-        fill="none" stroke-linecap="round"/>
+  <!-- ── Centre gold ring + dot ── -->
+  <circle cx="28" cy="28" r="5.8"
+          stroke="url(#gg)" stroke-width="1.15"/>
+  <circle cx="28" cy="28" r="2.4" fill="#C9A96E"/>
 
 </svg>
