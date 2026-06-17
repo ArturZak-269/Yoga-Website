@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: center;
   background: url('../images/yoga-nature.png') center / cover no-repeat;
+  background: image-set(
+    url('../images/yoga-nature.webp') type('image/webp'),
+    url('../images/yoga-nature.png')  type('image/png')
+  ) center / cover no-repeat;
   overflow: hidden;
 }
 
