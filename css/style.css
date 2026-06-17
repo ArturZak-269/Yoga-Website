@@ -78,12 +78,14 @@ h1, h2, h3, h4, h5, h6, p {
 .reveal {
   opacity: 0;
   transform: translateY(32px);
+  will-change: transform, opacity;
   transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
 }
 
 .reveal.revealed {
   opacity: 1;
   transform: none;
+  will-change: auto;
 }
 
 .reveal:nth-child(2) { transition-delay: 0.12s; }

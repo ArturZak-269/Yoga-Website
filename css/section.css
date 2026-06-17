@@ -3,11 +3,8 @@
 ══════════════════════════════════ */
 .hero {
   position: relative;
-  /* 100svh = small viewport height (excludes mobile browser chrome) */
-  height: 100svh;
-  /* fallback for browsers without svh support */
-  height: 100vh;
-  height: 100svh;
+  height: 100vh;   /* fallback for browsers without svh support */
+  height: 100svh;  /* small viewport height — excludes mobile browser chrome */
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -107,8 +104,8 @@
 @keyframes scrollDrop {
   0%   { transform: scaleY(0); opacity: 0; }
   30%  { opacity: 1; }
-  60%  { transform: scaleY(1); opacity: 1; }
-  100% { transform: scaleY(1); opacity: 0; transform-origin: bottom; }
+  65%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
 }
 
 /* ══════════════════════════════════
