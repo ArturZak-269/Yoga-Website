@@ -374,7 +374,9 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group input:focus-visible,
+.form-group textarea:focus,
+.form-group textarea:focus-visible {
   border-color: var(--sage);
   box-shadow: 0 0 0 3px rgba(107, 143, 111, 0.12);
 }

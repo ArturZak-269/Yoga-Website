@@ -7,6 +7,7 @@
   <title>Kontakt — Creative Yoga</title>
   <meta name="description" content="Skontaktuj się z Creative Yoga. Zapisz się na zajęcia w Krakowie.">
   <meta property="og:image" content="images/share.png">
+  <meta name="theme-color" content="#FDFAF6">
   <link rel="icon" href="images/website-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +20,7 @@
   <link href="css/mobile.css" rel="stylesheet">
   <script defer src="js/translations.js"></script>
   <script defer src="js/script.js"></script>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
     <nav class="navigation">
       <a href="about-me.html" class="navigation__item" data-translate="navAbout">O MNIE</a>
       <a href="index.html" class="navigation__item" data-translate="navGallery">GALERIA</a>
-      <a href="contact.html" class="navigation__item navigation__item--active" data-translate="navContact">KONTAKT</a>
+      <a href="contact.html" class="navigation__item navigation__item--active" data-translate="navContact" aria-current="page">KONTAKT</a>
     </nav>
     <div class="header__flags">
       <button id="plFlag" class="flag-button active-flag"><img src="images/PolandFlag.png" alt="PL"></button>
@@ -120,6 +122,7 @@
     <!-- ── Map ── -->
     <div class="map-section reveal">
       <iframe
+        title="Mapa dojazdu — Creative Yoga, ul. Siemiradzkiego 17, Kraków"
         height="420"
         loading="lazy"
         allowfullscreen
