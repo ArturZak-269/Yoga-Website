@@ -431,6 +431,35 @@
   margin: 0 auto;
 }
 
+/* Map gate: placeholder state (before consent) */
+.map-gate.map-placeholder {
+  background: var(--sage-pale);
+  border-radius: var(--radius-lg);
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-gate.map-placeholder iframe { display: none; }
+
+.map-gate__notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.map-gate__notice p {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* Map gate: active state (after consent) */
+.map-gate:not(.map-placeholder) .map-gate__notice { display: none; }
+
 .map-section iframe {
   width: 100%;
   border-radius: var(--radius-lg);
